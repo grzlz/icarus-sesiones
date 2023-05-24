@@ -1,4 +1,4 @@
-from games import number_guessing
+from games import number_guessing, higher_lower
 
 def play_chipiado():
     print("Bievnenido a mi play chipiado")
@@ -13,7 +13,7 @@ def play_chipiado():
         number_guessing()
 
     elif user_choice == 2:
-        print("Elegiste el juego 2")
+        higher_lower()
 
     elif user_choice == 3:
         print("Elegiste el juego 3")

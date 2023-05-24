@@ -8,3 +8,21 @@ def number_guessing():
         print("You won!")
     else: 
         print("You lost")
+
+def higher_lower():
+    computer_guess = randint(1,3)
+    user_guess = input("Higher or lower (h/l)? ")
+    number_guess = int(input("What number? "))
+
+    if user_guess == "h":
+        if number_guess > computer_guess:
+            print(f"You won! I wass guessing {computer_guess} and you guessed {number_guess}.")
+        else:
+            print(f"You lost! I wass guessing {computer_guess} and you guessed {number_guess}.")
+    
+    else:
+        if number_guess < computer_guess:
+            print(f"You won! I wass guessing {computer_guess} and you guessed {number_guess}.")
+        else:
+            print(f"You lost! I wass guessing {computer_guess} and you guessed {number_guess}.")
+    
