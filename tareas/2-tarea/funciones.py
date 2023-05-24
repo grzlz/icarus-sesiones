@@ -23,4 +23,12 @@ def play_chipiado():
         print("Introduce una opción válida")
 
 
-play_chipiado()
+keep_playing = True
+
+while keep_playing:
+    play_chipiado()
+
+    kp = input("Keep playing?")
+
+    if kp == "n":
+        keep_playing = False
