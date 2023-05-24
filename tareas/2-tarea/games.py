@@ -1,7 +1,7 @@
 from random import randint
 
 def number_guessing():
-    computer_guess = randint(1,1)
+    computer_guess = randint(1,10)
     user_guess = int(input("Select a number"))
 
     if user_guess == computer_guess:
