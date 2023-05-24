@@ -28,3 +28,7 @@ def higher_lower():
     
 
 # TODO - next function for next game
+
+# TODO - modify interactivite
+
+# TODO - set an only language 
