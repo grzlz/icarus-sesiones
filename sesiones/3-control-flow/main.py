@@ -41,7 +41,7 @@ while keep_going:
     funcion_loop()
     user_input = input("Do you want to keep playing?")
     if user_input == "n":
-        break
+        keep_going = False
 
 while True:
     funcion_loop()
