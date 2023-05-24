@@ -7,15 +7,11 @@ keep_playing = True
 while keep_playing == True:
     computer_choice = randint(1,10)
     user_guess = int(input("Guess a number between 1-10"))
-    if isinstance(user_guess) == True:
-        if user_guess == computer_choice:
-            print("Your guess is correct.")
-        else:
-            print("Your guess is incorrect.")
-            
-        user_choice = input("Do you want to keep playing? Pres y for yes and n for no.")
-        
-        if user_choice == "n":
-            keep_playing = False
+    if user_guess == computer_choice:
+        print("Your guess is correct.")
     else:
-        user_guess = input("Your guess is not a number. Please enter a valid number between 1 and 10.")
+        print("Your guess is incorrect.")
+        
+    user_choice = input("Do you want to keep playing? Pres y for yes and n for no.") 
+    if user_choice == "n":
+        keep_playing = False
