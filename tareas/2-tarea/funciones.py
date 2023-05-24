@@ -1,4 +1,4 @@
-
+from games import number_guessing
 
 def play_chipiado():
     print("Bievnenido a mi play chipiado")
