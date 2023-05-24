@@ -1,3 +1,13 @@
+from random import randint
+
+def number_guessing():
+    computer_guess = randint(1,1)
+    user_guess = int(input("Select a number"))
+
+    if user_guess == computer_guess:
+        print("You won!")
+    else: 
+        print("You lost")
 
 
 
@@ -11,7 +21,7 @@ def play_chipiado():
         return "Error"
 
     if user_choice == 1:
-        print("Escogiste el juego 1")
+        number_guessing()
 
     elif user_choice == 2:
         print("Elegiste el juego 2")
