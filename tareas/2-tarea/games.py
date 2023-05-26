@@ -29,7 +29,3 @@ def higher_lower():
 
 def silly_game():
     print("I'm sorry you just lost, silly.")
-
-# TODO - set an only language 
-# TODO - modify interactivite
-
