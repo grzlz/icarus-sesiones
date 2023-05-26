@@ -19,7 +19,6 @@ def higher_lower():
             print(f"You won! I wass guessing {computer_guess} and you guessed {number_guess}.")
         else:
             print(f"You lost! I wass guessing {computer_guess} and you guessed {number_guess}.")
-    
     else:
         if number_guess < computer_guess:
             print(f"You won! I wass guessing {computer_guess} and you guessed {number_guess}.")
