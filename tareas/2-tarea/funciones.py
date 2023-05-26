@@ -16,7 +16,7 @@ def play_chipiado():
         higher_lower()
 
     elif user_choice == 3:
-        print("Elegiste el juego 3")
+        silly_game()
 
     else: 
         print("Introduce una opción válida")
