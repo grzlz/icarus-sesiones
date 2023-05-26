@@ -26,6 +26,5 @@ def higher_lower():
         else:
             print(f"You lost! I wass guessing {computer_guess} and you guessed {number_guess}.")
     
-
 def silly_game():
     print("I'm sorry you just lost, silly.")
