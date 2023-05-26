@@ -1,7 +1,7 @@
 from games import number_guessing, higher_lower, silly_game
 
 def play_chipiado():
-    print("Bievnenido a mi play chipiado")
+    print("Play Chipiado gives you the wamest welcome!")
 
     try: 
         user_choice = int(input("¿Qué quieres jugar? Tenemos 1. juego 1, 2. juego 2, 3. juego 3."))
