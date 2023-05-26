@@ -29,7 +29,8 @@ def higher_lower():
 
 # TODO - next function for next game
 def silly_game():
-    print("I'm sorry you simply lost, silly.")
+    print("I'm sorry you just lost, silly.")
+
 # TODO - set an only language 
 # TODO - modify interactivite
 
