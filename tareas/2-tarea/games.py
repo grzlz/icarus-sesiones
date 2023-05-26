@@ -27,7 +27,6 @@ def higher_lower():
             print(f"You lost! I wass guessing {computer_guess} and you guessed {number_guess}.")
     
 
-# TODO - next function for next game
 def silly_game():
     print("I'm sorry you just lost, silly.")
 
