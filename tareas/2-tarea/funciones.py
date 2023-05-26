@@ -1,4 +1,4 @@
-from games import number_guessing, higher_lower
+from games import number_guessing, higher_lower, silly_game
 
 def play_chipiado():
     print("Bievnenido a mi play chipiado")
