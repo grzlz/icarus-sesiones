@@ -4,9 +4,9 @@ def play_chipiado():
     print("Play Chipiado gives you the wamest welcome!")
 
     try: 
-        user_choice = int(input("¿Qué quieres jugar? Tenemos 1. juego 1, 2. juego 2, 3. juego 3."))
+        user_choice = int(input("Choose one of our three wonderful games. (1/2/3)"))
     except:
-        print("Introduce una opción válida")
+        print("Please choose a valid option.")
         return "Error"
 
     if user_choice == 1:
@@ -19,7 +19,7 @@ def play_chipiado():
         silly_game()
 
     else: 
-        print("Introduce una opción válida")
+        print("Please choose a valid option.")
 
 
 keep_playing = True
