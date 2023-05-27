@@ -12,3 +12,4 @@ diccionario1 = {
     3: "verde"
 }
 
+print(diccionario1{1})
