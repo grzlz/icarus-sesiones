@@ -33,6 +33,7 @@ def ahorcado():
         print("¡Perdiste! El color era:", r_color)
 
 def volado():
+    print('Hola, bienvenido al juego de volado')
     opciones = {1:'águila', 2:'sol'}
     eleccion = input('¿Qué crees que salga? "1" para águila, "2" para sol')
     resultado = random.randint(1,2)
@@ -49,3 +50,19 @@ def volado():
             print("Este no es un número válido")
     else:
         print("Esto no es un número")
+
+def adivinanza():
+    print("Bienvenido al juego de la adivinanza")
+    c_number = random.randint(0,9)
+    u_number = input("¿Qué número crees que estoy adivinando? Del 0 al 9: ")
+    if u_number.isnumeric() == True:
+        if u_number > 9:
+            print(f"El número que escogí fue {c_number}")
+            if c_number == u_number:
+                print("Adivinaste")
+            else:
+                print("No adivinaste")
+        else:
+            print("Este no es un número válido")
+    else:
+        print("Este no es un número entero")
