@@ -12,4 +12,11 @@ diccionario1 = {
     3: "verde"
 }
 
-print(diccionario1{1})
+print(diccionario1[4])
+
+lista = [1,2,3,0,4]
+
+for a in lista:
+    if a == 0:
+        lista.remove(a)
+        lista.insert(x-1, a)
