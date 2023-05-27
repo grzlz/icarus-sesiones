@@ -5,6 +5,6 @@ def add_numbers(lista):
     for a in lista:
         acumulador += a
     print(acumulador)
-
+    
 add_numbers(lista)
         
