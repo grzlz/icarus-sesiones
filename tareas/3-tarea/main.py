@@ -21,4 +21,9 @@ def fifth_function(my_list, item):
     my_list.append(item)
     return my_list
 
-print(fifth_function(first_function(), 23))
+# 6. Write a function that prints the second half o a list
+def sixth_function(my_list):
+    middle_index = len(my_list)//2
+    print(my_list[middle_index:])
+
+sixth_function([1,2,4, 6])
