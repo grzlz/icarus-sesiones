@@ -83,6 +83,5 @@ def fourteen(my_list):
 
 
 # 15. Write a function that reverts the order of a list
-
 def fifteen(my_list):
     return my_list[::-1]
