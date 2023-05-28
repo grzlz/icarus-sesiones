@@ -20,6 +20,5 @@ keep_playing = True
 while keep_playing:
     play_chipiado()
     kp = input("Do you want to keep playing?")
-
     if kp == "n":
         keep_playing = False
