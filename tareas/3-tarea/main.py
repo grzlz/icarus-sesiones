@@ -26,4 +26,7 @@ def sixth_function(my_list):
     middle_index = len(my_list)//2
     print(my_list[middle_index:])
 
-sixth_function([1,2,4, 6])
+# 7. Write a function that creates a nested list and prints out the second element in the second list
+def seventh_function():
+    nested_list = [[6, 7, 8, first_function()]]
+    print(nested_list[0][1])
