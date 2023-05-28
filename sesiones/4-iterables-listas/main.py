@@ -17,3 +17,6 @@ def sum_to_item(my_list):
 
 
 example = [1, 2, 3]
+
+print(get_sum(example))
+print(sum_to_item(example))
