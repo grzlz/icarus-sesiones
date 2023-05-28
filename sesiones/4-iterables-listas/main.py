@@ -1,0 +1,8 @@
+def get_sum(my_list):
+    my_sum = 0
+
+    for number in my_list:
+        my_sum += number
+
+    return my_sum
+
