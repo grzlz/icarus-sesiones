@@ -55,4 +55,12 @@ def tenth_function():
 
     return new_list
 
-print(tenth_function())
+# 11. Write a program that calculates and prints the sum of all numbers in a list
+def eleven(my_list):
+    total = 0
+    for i in my_list:
+        total += i
+
+    return total
+
+print(eleven([1, 2, 3]))
