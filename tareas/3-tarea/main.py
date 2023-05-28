@@ -55,12 +55,34 @@ def tenth_function():
 
     return new_list
 
-# 11. Write a program that calculates and prints the sum of all numbers in a list
+# 11. Write a function that calculates and prints the sum of all numbers in a list
 def eleven(my_list):
     total = 0
     for i in my_list:
         total += i
+    print(total)
 
-    return total
+# 12. Write a funciton that calculates and prints the multiplication of all numbers in a list
+def twelve(my_list):
+    total = 1
+    for i in my_list:
+        total *= i
+    print(total)
 
-print(eleven([1, 2, 3]))
+# 13. Write a function that prints the maximum and minimum value of a list
+def thirteen(my_list):
+    print(f"Max: {max(my_list)}, min: {min(my_list)}.")
+
+# 14. Write a function that removes duplicates from a list
+def fourteen(my_list):
+    new_list = []
+    for item in my_list:
+        if item not in new_list:
+            new_list.append(item)
+    return new_list
+
+
+# 15. Write a function that reverts the order of a list
+
+def fifteen(my_list):
+    return my_list[::-1]
