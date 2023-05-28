@@ -16,4 +16,9 @@ def fourth_function(my_list):
     my_list[1] = "Ola k ase"
     return my_list
 
-print(fourth_function(first_function()))
+# 5. Write a function that adds a new item to the end of a list
+def fifth_function(my_list, item):
+    my_list.append(item)
+    return my_list
+
+print(fifth_function(first_function(), 23))
