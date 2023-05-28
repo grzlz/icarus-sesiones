@@ -14,3 +14,6 @@ def sum_to_item(my_list):
         new_list.append(number + 1)
 
     return new_list
+
+
+example = [1, 2, 3]
