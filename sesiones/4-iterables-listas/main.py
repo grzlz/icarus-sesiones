@@ -6,3 +6,9 @@ def get_sum(my_list):
 
     return my_sum
 
+def sum_to_item(my_list):
+
+    new_list = []
+
+    for number in my_list:
+        new_list.append(number + 1)
