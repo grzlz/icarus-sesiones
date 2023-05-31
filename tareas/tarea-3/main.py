@@ -33,18 +33,17 @@ def paso8(lista):
         print(a)
 
 def paso9():
-    lista9 = []
-    for a in range(1,11):
-        cuadrado = i ** 2
-        lista9.append(cuadrado)
-    return lista9
+    lista9 = [a**2 for a in range(1,11)]
+    return lista9    
 
 def paso10(lista1,lista2):
-    lista10 = []
-    for a in range(len(lista1)):
-        resultado10 = lista1[a] * lista2[a]
-        lista10.append(resultado10)
+    lista10 = [a * b for a,b in zip(lista1,lista2)]
+    print(lista10)
     return lista10
+
+lista1 = [1,2,3,4,5]
+lista2 = [1,2,3,4,5]
+paso10(lista1,lista2)
 
 def paso11(lista):
     return(sum(lista))
@@ -72,4 +71,3 @@ def paso15(lista):
     a = lista
     a.reverse()
     return(a)
-
