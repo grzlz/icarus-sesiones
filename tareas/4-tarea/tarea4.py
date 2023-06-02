@@ -4,6 +4,10 @@ def square_keys():
     return my_dict
 
 # 2. Given a dictionary, access and print a specific key's value.
+def print_dict_key(input_dict, key):
+    print(input_dict.get(key))
+
+print_dict_key(square_keys(), 2)
 
 # 3. Write a function that takes a dictionary and a key-value pair, then adds the key-value pair to the dictionary if the key doesn't already exist.
 
