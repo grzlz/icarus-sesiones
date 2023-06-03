@@ -45,15 +45,20 @@ def dict_comp():
     
     return(my_dict)
 
-# 9. Write a function that takes two lists of equal length as input and returns a dictionary where the elements of the first list are keys, and elements of the second list are values.
+# 8. Write a function that takes two lists of equal length as input and returns a dictionary where the elements of the first list are keys, and elements of the second list are values.
 def lists_to_dict(list1, list2):
     if len(list1) == len(list2):
         return {i: j for i, j in zip(list1, list2)}
     else:
         raise ValueError("Lists must be of equal length")
 
+# 9. Write a function that finds and returns the key with the maximum value in a dictionary.
+def max_value(input_dict):
+    key = [key for key in input_dict if input_dict[key] == max(input_dict.values())]
+    return key[0]
 
-print(lists_to_dict([1, 2], [3]))
+print(max_value(square_keys()))
+
 # 10. Write a function that takes a dictionary as input and returns a list of all the values in the dictionary.
 
 # 11. Write a program that sorts and prints a dictionary by its keys.
@@ -62,6 +67,4 @@ print(lists_to_dict([1, 2], [3]))
 
 # 13. Given a list of words, write a function that returns a dictionary where keys are words and values are the count of each word in the list.
 
-# 14. Write a function that merges two dictionaries and returns the result.
 
-# 15. Write a function that finds and returns the key with the maximum value in a dictionary.
