@@ -1,6 +1,7 @@
 # 1. Create a dictionary where keys are integers from 1 to 5, and values are the square of the keys.
 def square_keys():
     my_dict = {i: i**2 for i in range(1,6)}
+
     return my_dict
 
 # 2. Given a dictionary, access and print a specific key's value.
@@ -14,6 +15,7 @@ def add_to_dict(input_dict, key, value):
         print("We already have a value for that")
     else:
         input_dict2[key] = value
+
     return input_dict2
 
 # 4. Write a function that deletes a key-value pair from a dictionary, given a specific key.
@@ -22,11 +24,15 @@ def remove_from_dict(input_dict, key):
         del input_dict[key]
     else:
         print("No such key.")
+
     return input_dict
 
-print(remove_from_dict(square_keys(), 3))
-
 # 5. Write a program to check if a key exists in a dictionary.
+def verify_key(input_dict, key):
+    if key in input_dict:
+        print("We got the key!")
+    else:
+        print("No key here")
 
 # 6. Write a function that iterates over a dictionary and prints all key-value pairs.
 
