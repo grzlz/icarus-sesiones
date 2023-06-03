@@ -7,9 +7,14 @@ def square_keys():
 def print_dict_key(input_dict, key):
     print(input_dict.get(key))
 
-print_dict_key(square_keys(), 2)
-
 # 3. Write a function that takes a dictionary and a key-value pair, then adds the key-value pair to the dictionary if the key doesn't already exist.
+def add_to_dict(input_dict, key, value):
+    input_dict2 = input_dict.copy()
+    if key in input_dict2:
+        print("We already have a value for that")
+    else:
+        input_dict2[key] = value
+    return input_dict2
 
 # 4. Write a function that deletes a key-value pair from a dictionary, given a specific key.
 
