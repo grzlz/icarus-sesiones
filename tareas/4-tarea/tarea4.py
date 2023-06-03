@@ -17,6 +17,14 @@ def add_to_dict(input_dict, key, value):
     return input_dict2
 
 # 4. Write a function that deletes a key-value pair from a dictionary, given a specific key.
+def remove_from_dict(input_dict, key):
+    if key in input_dict:
+        del input_dict[key]
+    else:
+        print("No such key.")
+    return input_dict
+
+print(remove_from_dict(square_keys(), 3))
 
 # 5. Write a program to check if a key exists in a dictionary.
 
