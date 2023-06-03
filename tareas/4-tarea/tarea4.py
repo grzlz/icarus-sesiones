@@ -57,7 +57,6 @@ def max_value(input_dict):
     key = [key for key in input_dict if input_dict[key] == max(input_dict.values())]
     return key[0]
 
-print(max_value(square_keys()))
 
 # 10. Write a function that takes a dictionary as input and returns a list of all the values in the dictionary.
 
