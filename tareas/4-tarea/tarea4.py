@@ -35,13 +35,25 @@ def verify_key(input_dict, key):
         print("No key here")
 
 # 6. Write a function that iterates over a dictionary and prints all key-value pairs.
+def print_items(input_dict):
+    for key, value in input_dict.items():
+        print(key, value)
 
-# 7. Write a program to calculate and print the number of key-value pairs in a dictionary.
-
-# 8. Use dictionary comprehension to create a dictionary that maps numbers from 1 to 10 to their squares.
+# 7. Use dictionary comprehension to create a dictionary that maps numbers from 1 to 10 to their squares.
+def dict_comp():
+    my_dict = {i: i**2 for i in range(1, 11)}
+    
+    return(my_dict)
 
 # 9. Write a function that takes two lists of equal length as input and returns a dictionary where the elements of the first list are keys, and elements of the second list are values.
+def lists_to_dict(list1, list2):
+    if len(list1) == len(list2):
+        return {i: j for i, j in zip(list1, list2)}
+    else:
+        raise ValueError("Lists must be of equal length")
 
+
+print(lists_to_dict([1, 2], [3]))
 # 10. Write a function that takes a dictionary as input and returns a list of all the values in the dictionary.
 
 # 11. Write a program that sorts and prints a dictionary by its keys.
