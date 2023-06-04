@@ -43,7 +43,6 @@ class Student(Person):
         self.grade = grade
 
     def birthday(self):
-        super().birthday()
         print("Ya no cumples mas")
 
 a = Student("Memo", 15, 3)
