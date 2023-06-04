@@ -59,6 +59,8 @@ def max_value(input_dict):
 
 
 # 10. Write a function that takes a dictionary as input and returns a list of all the values in the dictionary.
+def dict_list(input_dict):
+    return [i for i in input_dict.values()]
 
 # 11. Write a program that sorts and prints a dictionary by its keys.
 
