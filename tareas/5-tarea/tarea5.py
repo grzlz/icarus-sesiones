@@ -3,10 +3,21 @@ class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
+
 # 2. Create an instance of the `Person` class and assign attributes to it.
 yo = Person("Memo", 26)
-print(yo.name)
+
 # 3. Add a `birthday` method to the `Person` class that increases the person's age by one.
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def birthday(self):
+        self.age += 1
+
+yo = Person("Memo", 26)
+print(yo.age)
 # 4. Modify the `Person` class to include an initialization method that assigns `name` and `age` to instances when they're created.
 # 5. Create a `Student` class that inherits from `Person` and includes an additional `grade` attribute.
 # 6. Override the `birthday` method in `Student` class so that it also prints a congratulatory message.
