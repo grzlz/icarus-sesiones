@@ -17,11 +17,38 @@ class Person:
         self.age += 1
 
 # 4. Modify the `Person` class to include an initialization method that assigns `name` and `age` to instances when they're created.
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def birthday(self):
+        self.age += 1
+
 
 # 5. Create a `Student` class that inherits from `Person` and includes an additional `grade` attribute.
+class Student(Person):
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
+
+# Student still has access to birthday()
 
 # 6. Override the `birthday` method in `Student` class so that it also prints a congratulatory message.
+class Student(Person):
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
 
+    def birthday(self):
+        super().birthday()
+        print("Ya no cumples mas")
+
+a = Student("Memo", 15, 3)
+a.birthday()
+print(a.age)
 # 7. Use the `super()` function in the `Student` class to call the `birthday` method of the `Person` class.
 
 # 8. Modify the `Person` class to make the `age` attribute private. Add a method that returns the value of `age`.
