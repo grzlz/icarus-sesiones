@@ -63,6 +63,10 @@ def dict_list(input_dict):
     return [i for i in input_dict.values()]
 
 # 11. Write a program that sorts and prints a dictionary by its keys.
+def key_sort(input_dict):
+    sorted_dict = sorted(input_dict)
+    for i in sorted_dict:
+        print(input_dict.get(i))
 
 # 12. Write a program that sorts and prints a dictionary by its values.
 
