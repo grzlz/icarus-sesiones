@@ -75,5 +75,3 @@ def value_sort(input_dict):
 # 13. Given a list of words, write a function that returns a dictionary where keys are words and values are the count of each word in the list.
 def word_dict(input_list):
     return {i: len(i) for i in input_list}
- 
-print(word_dict(["hola", "adios", "a"]))
