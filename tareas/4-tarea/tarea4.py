@@ -70,9 +70,7 @@ def key_sort(input_dict):
 
 # 12. Write a program that sorts a dictionary by its values and prints a list of its values.
 def value_sort(input_dict):
-    return [value for value in sorted(input_dict.values())]
-
-print(value_sort({1: 4, 2: 3}))
+     print([value for value in sorted(input_dict.values())])
 
 # 13. Given a list of words, write a function that returns a dictionary where keys are words and values are the count of each word in the list.
 
