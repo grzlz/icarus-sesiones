@@ -1,0 +1,13 @@
+#paso 1:
+nombre = "Andrés Portos Pérez Salazar"
+edad = 21
+print(type(nombre))
+print(type(edad))
+
+#paso2
+def separar_frase(frase):
+    lista = list(frase.split())
+    return(lista)
+
+print(separar_frase("No llevamos prisa"))
+
