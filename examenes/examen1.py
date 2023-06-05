@@ -24,11 +24,13 @@ def impar(n):
         print("Este no es un número entero.")
 
 def cuenta_impares(numeros):
+    numero_impares = 0
     impares = []
     for n in numeros:
         if n % 2 == 1:
             impares.append[n]
-    print(impares)
+            numero_impares += 1
+    print(f"Hay {numero_impares} impares \ Son {impares}")
 
 def hola():
     nombre = input("¿Cómo te llamas?: ")
