@@ -44,10 +44,7 @@ class Student(Person):
 
     def birthday(self):
         print("Ya no cumples mas")
-
-a = Student("Memo", 15, 3)
-a.birthday()
-print(a.age)
+        
 # 7. Use the `super()` function in the `Student` class to call the `birthday` method of the `Person` class.
 
 # 8. Modify the `Person` class to make the `age` attribute private. Add a method that returns the value of `age`.
