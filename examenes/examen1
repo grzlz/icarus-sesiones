@@ -11,3 +11,39 @@ def separar_frase(frase):
 
 print(separar_frase("No llevamos prisa"))
 
+#paso3
+numbers = list(range(1,11))
+print(numbers)
+
+#paso4 
+dic1 = {"Matemáticas":10, "Historia":9, "Literatura":8.5}
+print(dic1)
+
+#paso5
+def impar(n):
+    if n % 2 == 0:
+        resultado = True
+    else:
+        resultado = False 
+    return(resultado)
+print(impar(123))
+
+#paso6
+def cuenta_impares(numeros):
+    cuenta = 0
+    for a in numeros:
+        if a % 2 != 0:
+            cuenta += 1
+    return(cuenta)
+
+#paso7
+def hola(nombre):
+    nombre = input("Ingresa tu nombre.")
+    if type(nombre) is str:
+        print(f"Hola {nombre}, espero que estés bien.")
+    else:
+        print("Esa no es una cadena de texto, intentalo de nuevo.")
+        hola(nombre)
+#paso8
+cuadrados = [a**2 for a in range(1,10)]
+print(cuadrados)
