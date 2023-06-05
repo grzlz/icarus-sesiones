@@ -47,3 +47,17 @@ def hola(nombre):
 #paso8
 cuadrados = [a**2 for a in range(1,10)]
 print(cuadrados)
+
+#paso9
+def division_segura(x, y):
+    if y == 0:
+        print("Error. No se puede dividir entre cero.")
+        resultado = None
+    else:
+        resultado = x/y
+    return(resultado) 
+
+#paso10
+from funciones import simple_cuatro
+
+print(simple_cuatro())
