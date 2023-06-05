@@ -45,7 +45,7 @@ def hola(nombre):
         print("Esa no es una cadena de texto, intentalo de nuevo.")
         hola(nombre)
 #paso8
-cuadrados = [a**2 for a in range(1,10)]
+cuadrados = [a**2 for a in range(1,11)]
 print(cuadrados)
 
 #paso9
