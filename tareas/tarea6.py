@@ -1,48 +1,58 @@
-import sys 
-import psycopg2
 import pandas as pd
-from sqlalchemy import create_engine
+import psycopg2
 
-class Procesadordedatos():
-    def __init__(self, conexion, usuario, contraseña, basededatos, tabla_fuente, tabla_destino, puerto):
-        self.conexion = conexion
-        self.usuario = usuario
-        self.contraseña = contraseña
-        self.basededatos = basededatos
-        self.tabla_fuente = tabla_fuente
-        self.tabla_destino = tabla_destino
-        self.puerto = puerto
-    def conectar(self):
+class ETL:
+    def __init__(self, host, port, database, user, password):
+        self.host = host
+        self.port = port
+        self.database = database
+        self.user = user
+        self.password = password
+
+    def extract(self, table_name):
         connection = psycopg2.connect(
-            database= self.basededatos,
-            user= self.usuario,
-            password=self.contraseña,
-            host=self.conexion,
-            port=self.puerto)
-    def extraer(self):
-        Procesadordedatos.conectar()
+            host=self.host,
+            port=self.port,
+            database=self.database,
+            user=self.user,
+            password=self.password
+        )
         cursor = connection.cursor()
-        cursor.execute(f"SELECT * FROM {self.tabla_fuente}")
+        cursor.execute(f"SELECT * FROM {table_name}")
         rows = cursor.fetchall()
         column_names = [desc[0] for desc in cursor.description]
-        df = pd.DataFrame(rows, columns=column_names)
         cursor.close()
         connection.close()
-        print(f'Estos son los datos de {self.tabla_fuente} \ {df}')
-    def transformar(self):
-        Procesadordedatos.extraer()
-        df['Promedio'] = df.mean(axis=1)
-        print(f'Incorporo una nueva columna con los promedios. \ {df}')
-    def load(self):
-        Procesadordedatos.transformar()
-        Procesadordedatos.conectar()
-        engine = create_engine('postgresql+psycopg2://', creator=lambda: connection)
-        df.to_sql(self.tabla_destino, engine, if_exists='replace', index=False)
+        return pd.DataFrame(rows, columns=column_names)
+
+    def transform(self, df):
+        df['mean'] = df.mean(axis=1)
+        return df
+
+    def load(self, df, table_name):
+        connection = psycopg2.connect(
+            host=self.host,
+            port=self.port,
+            database=self.database,
+            user=self.user,
+            password=self.password
+            )
+        cursor = connection.cursor()
+        columns = ', '.join([f"{column_name} {data_type}" for column_name, data_type in zip(df.columns, df.dtypes)])
+        cursor.execute(f"DROP TABLE IF EXISTS {table_name}")
+        cursor.execute(f"CREATE TABLE {table_name} ({columns})")
+
+        for _, row in df.iterrows():
+            cursor.execute(f"INSERT INTO {table_name} VALUES {tuple(row)}")
+    
+        connection.commit()
+        cursor.close()
         connection.close()
-        print(f'La base de datos {self.tabla_destino} se ha cargado con éxito')
 
-mi_basededatos = Procesadordedatos("54.67.75.40", "myuser", "test", "paco", "tabla_paco", "tabla_paco1", "5432")
 
-mi_basededatos.extraer()
-mi_basededatos.transformar()
-mi_basededatos.load()
+etl = ETL("54.67.75.40", "5432", "paco", "myuser", "test")
+
+paso1 = etl.extract("tablapaco")
+paso2 = etl.transform(paso1)
+paso3 = etl.load(paso2, "tablapaco1")
+
