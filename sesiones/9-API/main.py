@@ -14,25 +14,17 @@ if response.status_code == 200:
 else:
     print("Error al realizar la solicitud. Código de respuesta:", response.status_code)
 
-variables_deseadas = ["name","username","address.city","company.name"]
+resultados = []
 
-filtered_data = []
+for item in data:
+    diccionario = {
+        "name": item["name"],
+        "username": item["username"],
+        "city": item["address"]["city"],
+        "company.name": item["company"]["name"]
+    }
+    resultados.append(diccionario)
 
-for d in data:
-    values = {}
-    for key in variables_deseadas:
-        keys = key.split('.')
-        current_value = d
-        for k in keys:
-            if k in current_value:
-                current_value = current_value[k]
-            else:
-                current_value = None
-                break
-        values[key] = current_value
-    filtered_data.append(values)
-
-df = pd.DataFrame(filtered_data)
-
+df = pd.DataFrame(resultados)
 
 print(df)
