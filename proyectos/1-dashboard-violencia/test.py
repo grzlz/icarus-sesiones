@@ -2,8 +2,16 @@ import pdfplumber
 import re
 import requests
 from io import BytesIO
+import pandas as pd
 # What happens if I make a request?
 
+def get_date(date):
+    day = date[:2]
+    month = date[2:4]
+    year = date[4:]
+
+    formatted_date = f"{day}-{month}-{year}"
+    return formatted_date
 
 def get_dict(date):
     url = f"http://www.informeseguridad.cns.gob.mx/files/homicidios_{date}_v2.pdf"
@@ -53,10 +61,18 @@ def get_dict(date):
     ]
 
     new_dict = {key: result[key] for key in states if key in result}
+    df = pd.DataFrame.from_dict(new_dict, orient='index', columns=['Value'])
+    df.index.name = 'State'
+    df["Date"] = get_date(date)
+    return df
 
-    print(new_dict)
+
+def get_appended_dataframes(dates):
+    my_df = pd.concat([get_dict(date) for date in dates])
+    print(my_df)
+
 
 dates = ["10062023", "11062023", "12062023", "13062023"]
+get_appended_dataframes(dates)
 
-for date in dates:
-    get_dict(date)
+#TODO add date to dict, transform dict to df, incorporate logic to append to a bigger df
