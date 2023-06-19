@@ -75,4 +75,4 @@ def get_appended_dataframes(dates):
 dates = ["10062023", "11062023", "12062023", "13062023"]
 get_appended_dataframes(dates)
 
-#TODO add date to dict, transform dict to df, incorporate logic to append to a bigger df
+#TODO find best way to upload this to a database or to write it to a csv file
