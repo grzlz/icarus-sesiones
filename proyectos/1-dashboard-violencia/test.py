@@ -76,7 +76,6 @@ from datetime import datetime, timedelta
 # dates = ["10062023", "11062023", "12062023", "13062023"]
 # get_appended_dataframes(dates)
 
-#TODO find best way to upload this to a database or to write it to a csv file
 
 
 def generate_days():
@@ -93,3 +92,6 @@ def generate_days():
 
 days = generate_days()
 print(len(days))
+#TODO iterate over all the 1520 days and save the data to a csv file
+#TODO find the best way to save it to a csv file
+#TODO find best way to upload this to a database or to write it to a csv file
